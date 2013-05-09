@@ -1,0 +1,40 @@
+<head>
+    <title>Done</title>
+</head>
+
+<body>
+{{loginButtons}}
+{{> todos_main }}
+</body>
+
+<template name="todos_main">
+  <div class="todos container">
+    <div class="row container-fluid span11">
+      <img src="/arrow.png" class="left arrow" />
+      {{#each days}}
+        {{> day}}
+      {{/each}}
+      <img src="/arrow.png" class="right arrow" />
+    </div>
+  </div>
+</template>
+
+<template name="day">
+  <div data-moment="{{this.unix}}" class="day span2 {{#if isActive this}}active{{/if}} ">
+    <div class="row-fluid day-head">
+      <span class="day-head-left span4 row">
+        <span class="day-of-week">{{ day_fmt this }}</span>
+        <span class="month">{{ mon_fmt this }}</span>
+      </span>
+      <span class="date span8">{{ date_fmt this }}</span>
+    </div>
+    <hr />
+    <ul class="connectedSortable">
+      {{#each todos this}}
+      <li data-id="{{_id}}" id="{{_id}}"
+          data-original="{{text}}"
+          class="todo-item {{#if done}}done{{/if}}">{{text}}</li>
+      {{/each}}
+    </ul>
+  </div>
+</template>

@@ -1,0 +1,103 @@
+body {
+  background-color: #f1f2f2;
+  background-image: url("/check_header.png");
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+}
+.todos {
+  margin-top: 130px;
+}
+.todos .arrow {
+  position: relative;
+  top: 60px;
+}
+.todos .left.arrow {
+  float: left;
+}
+.todos .right.arrow {
+  float: right;
+  transform: rotate(180deg);
+  -ms-transform: rotate(180deg); /* IE 9 */
+  -moz-transform: rotate(180deg); /* Firefox */
+  -webkit-transform: rotate(180deg); /* Safari and Chrome */
+  -o-transform: rotate(180deg);
+  margin-right: 15px;
+}
+.todos .arrow:hover {
+  cursor: pointer;
+}
+.day-row {
+  margin-left: auto;
+  margin-right: auto;
+}
+.day ul {
+  list-style: none;
+  background-color: #FFFFFF;
+  margin:0;
+  min-height: 300px;
+}
+.day ul li {
+  padding:  5px 10px;
+  border-bottom: 1px solid #e6e7e8;
+}
+.day hr {
+  margin: 0;
+  height: 4px;
+  background-color: #898989;
+}
+.day.active hr {
+  background-color: #0de8c1;
+}
+.day .day-head {
+  margin-bottom: 20px;
+}
+.day .day-head .date {
+  font-size: 3.5em;
+  font-weight: 200;
+  padding-left: 10px;
+  margin-top:-4px;
+  line-height: 1;
+  height: 27px;
+}
+.day .day-head .day-of-week {
+  float: left;
+  clear: left;
+  font-weight: bold;
+}
+.day .day-head .day-head-left {
+  border-right: 1px solid #111111;
+  padding-right: 10px;
+}
+.day .day-head .month {
+  float: left;
+  clear: left;
+  color: #a8a9a9;
+  padding-bottom: 6px;
+  line-height: 14px;
+}
+
+ul {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.todo-item {
+  cursor: pointer;
+  position:relative;
+}
+.todo-item.done {
+  text-decoration: line-through;
+}
+.todo-item.editing {
+  padding: 5px 0 0;
+}
+.todo-item.editing input {
+  padding: 0 5px;
+  margin-bottom: 3px;
+}
+.todo-item .icon-pencil {
+  float:right;
+}
